@@ -23,7 +23,7 @@ int main(){
   int ob3_num;
   ob1.set_seacret_num(3);
   ob2.set_seacret_num(114514);
-
+// ob2.seacret_num = 100 はseacret_numが非公開のため無理
   cout << "数字を入力"  << endl;
   cin >> ob3_num;
   ob3.set_seacret_num(ob3_num);
