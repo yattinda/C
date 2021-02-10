@@ -18,4 +18,5 @@ void date(int year, int month, int day){
 int main(){
   date(2020, 02, 10);
   date("2020/2/10");
+  return 0;
 }
