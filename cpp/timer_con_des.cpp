@@ -28,6 +28,8 @@ timer::~timer(){
   cout << "経過時間 " << (end - start) / CLOCKS_PER_SEC << endl;
 }
 
+/*ctimeのclock()は、プログラムが処理を行った時間を返します。
+cin で入力を待っている間は、OSに処理を任せているのでプログラム自身は処理を行っていません。*/
 int main(){
   timer object;
   char enter;
