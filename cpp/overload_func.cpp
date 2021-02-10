@@ -1,9 +1,15 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-void date(char* date){
+void date(string date){
   cout << "日付 " << date << endl;
 }
+
+// void date(char* date){
+//   cout << "日付 " << date << endl;
+// }
 
 void date(int year, int month, int day){
   cout << "日付 " << year << "/" << month << "/" << day << endl;
