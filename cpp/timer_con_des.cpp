@@ -36,5 +36,6 @@ int main(){
 
   cout << "Press Enter to stop" << endl;
   cin >> enter;
+  cout << "#################################" << endl;
   return 0;
 }
