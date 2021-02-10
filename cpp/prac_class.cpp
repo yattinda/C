@@ -18,6 +18,7 @@ int myclass::get_seacret_num(){
 }
 
 int main(){
+  int i;
   myclass ob1, ob2, ob3;
   int ob3_num;
   ob1.set_seacret_num(3);
@@ -29,5 +30,5 @@ int main(){
 
   cout << "ob1 is " << ob1.get_seacret_num() << endl;
   cout << "ob2 is " << ob2.get_seacret_num() << endl;
-  cout << "ob3 is " << ob3.get_seacret_num() << endl;
+  for(i=0; i<2; i++) cout << "ob3 is " << ob3.get_seacret_num() << endl;
 }
