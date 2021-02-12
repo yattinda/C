@@ -13,7 +13,6 @@ public:
 };
 
 //派生クラス
-
 class derived : public base {
   int d;
 public:
@@ -33,6 +32,9 @@ void derived::set_d(int n){
   d = n;
 }
 
+//baseクラスのメンバ関数を呼び出せる
+/*baseクラスの公開メンバは全てderivedクラスの公開メンバ
+mul()は直接baseのメンバ変数のbにアクセスできないのでgetb()を呼ぶ*/
 int derived::mul(){
   return d * get_b();
 }
