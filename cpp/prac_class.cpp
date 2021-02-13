@@ -6,7 +6,15 @@ class myclass {
 
 public:
   void set_seacret_num(int num);
+  //自動インライン化
+  // void set_seacret_num(int num){
+  //   seacret_num = num;
+  // }
   int get_seacret_num();
+  //自動インライン化
+  // int get_seacret_num(){
+  //   return seacret_num;
+  // }
 };
 
 void myclass::set_seacret_num(int num){
