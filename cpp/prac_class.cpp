@@ -27,10 +27,12 @@ int myclass::get_seacret_num(){
 
 int main(){
   int i;
-  myclass ob1, ob2, ob3;
+  myclass ob1, ob2, ob22, ob3;
   int ob3_num;
   ob1.set_seacret_num(3);
   ob2.set_seacret_num(114514);
+//ob22にob2を代入
+  ob22 = ob2;
 // ob2.seacret_num = 100 はseacret_numが非公開のため無理
   cout << "数字を入力"  << endl;
   cin >> ob3_num;
@@ -38,5 +40,6 @@ int main(){
 
   cout << "ob1 is " << ob1.get_seacret_num() << endl;
   cout << "ob2 is " << ob2.get_seacret_num() << endl;
+  cout << "ob22 is " << ob22.get_seacret_num() << endl;
   for(i=0; i<2; i++) cout << "ob3 is " << ob3.get_seacret_num() << endl;
 }
