@@ -1,33 +1,47 @@
 #include <iostream>
 using namespace std;
+//前方宣言
+class track;
 
-class myclass{
-  int a, b;
+class car{
+  int passengers, speed;
 public:
-  myclass(int i, int j){
-    a = i;
-    b = j;
+  car(int p, int s){
+    passengers = p;
+    speed = s;
   }
 //フレンド関数の宣言
-  friend int isfactor(myclass ob);
+  friend int speed_comparision(car c, track t);
 };
 
-//フレンド関数なので非公開メンバのa,bにアクセスできる
-//フレンド関数はフレンド元のクラスのメンバでない => ob1.isfactor();は無理
-int isfactor(myclass ob){
-  if ((ob.a % ob.b) == 0){
-    return 1;
-  } else {
-    return 0;
+class track{
+  int weight, speed;
+public:
+  track(int w, int s){
+    weight = w;
+    speed = s;
   }
+//フレンド関数の宣言
+  friend int speed_comparision(car c, track t);
+};
+
+//フレンド関数なので非公開メンバのspeedにアクセスできる
+//フレンド関数はフレンド元のクラスのメンバでない => ob1.car();は無理
+int speed_comparision(car c, track t){
+  return (c.speed - t.speed);
 }
 
 int main(){
-  myclass ob1(100, 50), ob2(88, 3);
-  if(isfactor(ob1) == 1){
-    cout << "50は100の因数" << endl;
+  car c(4, 100);
+  track t(1145614, 100);
+  int speed_def = speed_comparision(c, t);
+  speed_comparision(c, t);
+  if(speed_def > 0){
+    cout << "車が速い" << endl;
+  } else if (speed_def < 0) {
+    cout << "トラックが速い" << endl;
   } else {
-    cout << "50は100の因数ではない" << endl;
+    cout << "同じ速さ" << endl;
   }
   return 0;
 }
