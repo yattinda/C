@@ -36,6 +36,7 @@ int main(){
   track t(1145614, 100);
   int speed_def = speed_comparision(c, t);
   speed_comparision(c, t);
+  cout << "speedを比較" << endl;
   if(speed_def > 0){
     cout << "車が速い" << endl;
   } else if (speed_def < 0) {
