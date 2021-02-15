@@ -1,4 +1,5 @@
 //newは型によって自動でメモリを割り当てる sizeofがいらない
+//デストラクタは配列の要素ごとに一回呼び出される
 
 #include <iostream>
 using namespace std;
