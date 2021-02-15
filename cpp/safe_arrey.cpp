@@ -10,6 +10,7 @@ public:
   ~array(){
     delete [] p;
   }
+  //参照を返す
   char& put(int i);
   char get(int i);
 };
@@ -24,20 +25,24 @@ array::array(int num){
   size = num;
 }
 
+//putとgetは逆の操作
+
+//配列に情報を格納
 char& array::put(int i){
   if(i<0 || i>size-1){
     cout << "境界エラー" << endl;
     exit(1);
   }
-  return p[i];
+  return p[i]; //p[i]への参照
 }
 
+//配列のデータを収得
 char array::get(int i){
   if(i<0 || i>size-1){
     cout << "境界エラー" << endl;
     exit(1);
   }
-  return p[i];
+  return p[i]; //文字を返す
 }
 
 int main(){
