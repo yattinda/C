@@ -36,5 +36,7 @@ int main(){
   for(i=0; i<10; i++){
     cout << i << "の二乗は" << p[i].get_product() << endl;
   }
+
+  delete [] p;
   return 0;
 }
