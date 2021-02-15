@@ -16,6 +16,7 @@ public:
 
 void myclass::show(){
   int t;
+  // t = add() 省略形
   t = this->add();
 
   cout << t << endl;
