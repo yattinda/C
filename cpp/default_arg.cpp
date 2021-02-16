@@ -9,7 +9,7 @@ public:
     x = n;
   }
   int get_x(){
-    return 0;
+    return x;
   }
 };
 
