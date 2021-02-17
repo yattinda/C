@@ -6,6 +6,7 @@ using namespace std;
 class samp {
   int a;
 protected:
+  //samp以外には非公開
   int b;
 public:
   int c;
