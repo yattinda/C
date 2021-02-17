@@ -14,9 +14,11 @@ public:
   }
 };
 
+//基本クラスをprivateで継承
 class derived : public base{
   int y;
 public:
+  //派生クラス内からは継承元のprivateにアクセスできる
   void set_x_y(int n, int m){
     set_x(n);
     y = m;
