@@ -15,10 +15,10 @@ public:
 };
 
 //基本クラスをprivateで継承
-class derived : public base{
+class derived : private base{
   int y;
 public:
-  //派生クラス内からは継承元のprivateにアクセスできる
+  //派生クラス内からは継承元にprivateによってアクセスできる
   void set_x_y(int n, int m){
     set_x(n);
     y = m;
