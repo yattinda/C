@@ -28,10 +28,10 @@ public:
     show_x();
     cout << y << endl;
   }
-}
+};
 
 int main(){
-  derived object;
+  derived ob;
   ob.set_x_y(100, 24);
   ob.show_x_y();
 
